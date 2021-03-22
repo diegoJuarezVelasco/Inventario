@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require("express-session");
+
 
 var session = require('express-session');
 
@@ -23,10 +25,16 @@ app.use(cookieParser());
 app.use(session({
   resave:false,
   saveUninitialized:true,
+<<<<<<< HEAD
   secret:'no_te_lo_digo'
 }));
 
 
+=======
+  secret: "no te lo digo"
+}));
+
+>>>>>>> 22da74b8f99c1b4224a40c2cb6be404cbc5e2cce
 app.use(express.static(path.join(__dirname, 'public')));
 // bootstrap
 app.use(express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
